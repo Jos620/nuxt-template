@@ -1,3 +1,5 @@
+const { compilerOptions } = require('./.nuxt/tsconfig.server.json');
+
 module.exports = {
   root: true,
   env: {
@@ -8,13 +10,20 @@ module.exports = {
   parserOptions: {
     parser: '@typescript-eslint/parser',
   },
-  extends: ['@nuxtjs/eslint-config-typescript', 'prettier'],
+  extends: ['prettier'],
   plugins: ['prettier', 'simple-import-sort'],
   rules: {
     'simple-import-sort/imports': [
       'error',
       {
-        groups: [['^\\u0000'], ['^node:'], ['^', '^#'], ['^\\.']],
+        groups: [
+          ['^\\u0000'],
+          ['^node:'],
+          ['^@?\\w'],
+          [`^(${Object.keys(compilerOptions.paths).join('|')})`],
+          ['^'],
+          ['^\\.'],
+        ],
       },
     ],
   },
