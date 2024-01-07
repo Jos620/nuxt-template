@@ -3,14 +3,16 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "nuxt build",
+    "build:pre": "rimraf .output",
+    "build:app": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint:js": "eslint --ext \".cjs,.mjs,.ts,.js,.vue\" --ignore-path .gitignore .",
     "format:js": "prettier --write \"**/*.{cjs,mjs,ts,vue,json}\"",
-    "run:lint": "run-s format:js lint:js"
+    "run:lint": "run-s format:js lint:js",
+    "run:build": "run-s build:pre build:app"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
@@ -22,6 +24,7 @@
     "npm-run-all": "^4.1.5",
     "nuxt": "^3.9.0",
     "prettier": "^3.1.1",
+    "rimraf": "^5.0.5",
     "typescript": "^5.3.3",
     "vue": "^3.4.5",
     "vue-router": "^4.2.5"
