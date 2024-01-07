@@ -10,9 +10,10 @@ module.exports = {
   parserOptions: {
     parser: '@typescript-eslint/parser',
   },
-  extends: ['prettier'],
+  extends: ['@nuxtjs/eslint-config-typescript', 'prettier'],
   plugins: ['prettier', 'simple-import-sort'],
   rules: {
+    'import/order': 'off',
     'simple-import-sort/imports': [
       'error',
       {
