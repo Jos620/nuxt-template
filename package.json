@@ -5,13 +5,15 @@
   "scripts": {
     "build:pre": "rimraf .output",
     "build:app": "nuxt build",
-    "dev": "nuxt dev",
+    "dev:pre": "kill-port 3000",
+    "dev:app": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint:js": "eslint --ext \".cjs,.mjs,.ts,.js,.vue\" --ignore-path .gitignore .",
     "format:js": "prettier --write \"**/*.{cjs,mjs,ts,vue,json}\"",
     "run:lint": "run-s format:js lint:js",
+    "run:dev": "run-s dev:pre dev:app",
     "run:build": "run-s build:pre build:app"
   },
   "devDependencies": {
@@ -21,6 +23,7 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.2",
     "eslint-plugin-simple-import-sort": "^10.0.0",
+    "kill-port-process": "^3.2.1",
     "npm-run-all": "^4.1.5",
     "nuxt": "^3.9.0",
     "prettier": "^3.1.1",
