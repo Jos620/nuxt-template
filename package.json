@@ -12,10 +12,10 @@
     "lint:js": "eslint --ext \".cjs,.mjs,.ts,.js,.vue\" --ignore-path .gitignore .",
     "format:js": "prettier --write \"**/*.{cjs,mjs,ts,vue,json}\"",
     "test:ts": "nuxt typecheck",
-    "run:lint": "run-s format:js lint:js",
-    "run:test": "run-s test:ts",
-    "run:dev": "run-s dev:pre dev:app",
-    "run:build": "run-s build:pre build:app"
+    "lint": "run-s format:js lint:js",
+    "test": "run-s test:ts",
+    "dev": "run-s dev:pre dev:app",
+    "build": "run-s build:pre build:app"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
