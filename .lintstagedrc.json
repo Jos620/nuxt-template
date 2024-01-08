@@ -1,0 +1,4 @@
+{
+  "*.{js,cjs,mjs,ts,vue}": ["prettier --write", "eslint"],
+  "*.json": ["prettier --write"]
+}

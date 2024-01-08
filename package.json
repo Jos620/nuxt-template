@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "postinstall": "nuxt prepare",
+    "prepare": "husky install",
     "build:pre": "rimraf .output",
     "build:app": "nuxt build",
     "dev:pre": "kill-port 3000",
@@ -25,6 +26,7 @@
     "eslint-plugin-prettier": "^5.1.2",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "kill-port-process": "^3.2.1",
+    "lint-staged": "^15.2.0",
     "npm-run-all": "^4.1.5",
     "nuxt": "^3.9.0",
     "prettier": "^3.1.1",
@@ -32,7 +34,8 @@
     "typescript": "^5.3.3",
     "unocss": "^0.58.3",
     "vue": "^3.4.5",
-    "vue-router": "^4.2.5"
+    "vue-router": "^4.2.5",
+    "husky": "^8.0.0"
   },
   "dependencies": {
     "@pinia/nuxt": "^0.5.1",
