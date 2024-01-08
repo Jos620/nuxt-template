@@ -9,4 +9,8 @@ import {
 export default defineConfig({
   presets: [presetUno(), presetAttributify()],
   transformers: [transformerDirectives(), transformerVariantGroup()],
+  shortcuts: {
+    center: 'flex items-center justify-center',
+    col: 'flex flex-col',
+  },
 });
