@@ -18,6 +18,8 @@
     "build": "run-s build:pre build:app"
   },
   "devDependencies": {
+    "@commitlint/cli": "^18.4.4",
+    "@commitlint/config-conventional": "^18.4.4",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@typescript-eslint/parser": "^6.18.0",
     "@unocss/nuxt": "^0.58.3",
