@@ -1,5 +1,5 @@
 <template>
-  <div h-screen center gap-2>
+  <div h-screen center gap-2 bg-dark text-white>
     <h1 text-4xl>Nuxt Template</h1>
 
     <a href="https://github.com/jos620/nuxt-template" target="_blank">
