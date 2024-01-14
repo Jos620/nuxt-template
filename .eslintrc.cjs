@@ -27,14 +27,19 @@ module.exports = {
         ],
       },
     ],
-    'vue/multi-word-component-names': 'off',
-    'vue/no-multiple-template-root': 'off',
   },
   overrides: [
     {
       files: ['*.cjs'],
       rules: {
         '@typescript-eslint/no-var-requires': 'off',
+      },
+    },
+    {
+      files: ['*.vue'],
+      rules: {
+        'vue/multi-word-component-names': 'off',
+        'vue/no-multiple-template-root': 'off',
       },
     },
   ],
