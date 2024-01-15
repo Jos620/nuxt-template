@@ -13,10 +13,14 @@
     "format:js": "prettier --write \"**/*.{cjs,mjs,ts,vue,json}\"",
     "test:ts": "nuxt typecheck",
     "test:unit": "vitest",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:report": "playwright show-report",
     "lint": "run-s format:js lint:js",
     "test": "run-s test:ts",
     "dev": "run-s dev:pre dev:app",
-    "build": "run-s build:pre build:app"
+    "build": "run-s build:pre build:app",
+    "preview": "run-s build && nuxt preview"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.4",
