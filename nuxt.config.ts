@@ -2,5 +2,10 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   srcDir: 'src',
-  modules: ['@unocss/nuxt', '@pinia/nuxt', '@vueuse/nuxt'],
+  modules: [
+    '@unocss/nuxt',
+    '@pinia/nuxt',
+    '@vueuse/nuxt',
+    '@nuxt/test-utils/module',
+  ],
 });
