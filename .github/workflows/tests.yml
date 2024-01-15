@@ -5,6 +5,18 @@ on:
   pull_request:
     branches: [main]
 jobs:
+  unit:
+    timeout-minutes: 20
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 18
+    - name: Install dependencies
+      run: npm install -g pnpm && pnpm install
+    - name: Run Vitest tests
+      run: pnpm test:unit
   tests_e2e:
     timeout-minutes: 60
     runs-on: ubuntu-latest
