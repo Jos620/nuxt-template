@@ -22,7 +22,7 @@
     "test": "run-s test:*",
     "dev": "run-s dev:pre dev:app",
     "build": "run-s build:pre build:app",
-    "preview": "run-s build dev:pre && nuxt preview"
+    "preview": "run-s build && nuxt preview"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.4",
