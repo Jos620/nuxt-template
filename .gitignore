@@ -25,7 +25,8 @@ logs
 
 # Tests
 __snapshots__
-/test-results/
-/playwright-report/
+/tests/e2e/report/
+/tests/e2e/snapshots/
+/tests/e2e/results/
 /blob-report/
 /playwright/.cache/
