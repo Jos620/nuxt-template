@@ -8,4 +8,15 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxt/test-utils/module',
   ],
+  hooks: {
+    'prepare:types'({ tsConfig }) {
+      const aliasToRemove = ['~', '~/*', '~~', '~~/*'];
+
+      aliasToRemove.forEach((alias) => {
+        if (tsConfig.compilerOptions?.paths[alias]) {
+          delete tsConfig.compilerOptions.paths[alias];
+        }
+      });
+    },
+  },
 });
