@@ -27,6 +27,7 @@ module.exports = {
         ],
       },
     ],
+    'no-useless-constructor': 'off',
   },
   overrides: [
     {
