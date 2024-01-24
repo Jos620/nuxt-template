@@ -1,9 +1,3 @@
-import { http, HttpResponse } from 'msw';
+import { apiTestMock } from '@@/src/server/api/test/mock';
 
-import type { TestResponse } from '@@/src/server/api/test';
-
-export default [
-  http.get('/api/test', () => {
-    return HttpResponse.json<TestResponse>({ title: 'Mocked title' });
-  }),
-];
+export default [apiTestMock];
