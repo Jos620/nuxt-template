@@ -5,7 +5,7 @@
   "scripts": {
     "postinstall": "nuxt prepare",
     "prepare": "husky install",
-    "build:pre": "rimraf .output",
+    "build:pre": "nuxt cleanup",
     "build:app": "nuxt build",
     "dev:pre": "kill-port 3000",
     "dev:app": "nuxt dev",
@@ -54,7 +54,6 @@
     "playwright-core": "^1.40.1",
     "playwright-msw": "^3.0.1",
     "prettier": "^3.1.1",
-    "rimraf": "^5.0.5",
     "typescript": "^5.3.3",
     "unocss": "^0.58.3",
     "vitest": "^1.2.0",
