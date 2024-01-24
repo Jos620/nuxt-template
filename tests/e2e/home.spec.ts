@@ -1,10 +1,10 @@
-import { expect, test } from '@playwright/test';
+import { expect, test } from '.';
 
 test('Title', async ({ page }) => {
   await page.goto('/');
 
   const title = page.getByRole('heading');
-  await expect(title).toHaveText('Nuxt Template');
+  await expect(title).toHaveText('Mocked title');
 });
 
 test('Counter', async ({ page }) => {

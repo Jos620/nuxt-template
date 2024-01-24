@@ -23,7 +23,7 @@
     "test": "run-s test:*",
     "dev": "run-s dev:pre dev:app",
     "build": "run-s build:pre build:app",
-    "preview": "run-s build && nuxt preview"
+    "preview": "BUILD_TYPE=preview run-s build && nuxt preview"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.4",
@@ -48,9 +48,11 @@
     "husky": "^8.0.0",
     "kill-port-process": "^3.2.1",
     "lint-staged": "^15.2.0",
+    "msw": "^2.1.4",
     "npm-run-all": "^4.1.5",
     "nuxt": "^3.9.0",
     "playwright-core": "^1.40.1",
+    "playwright-msw": "^3.0.1",
     "prettier": "^3.1.1",
     "rimraf": "^5.0.5",
     "typescript": "^5.3.3",
