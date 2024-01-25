@@ -1,3 +1,3 @@
-import { apiTestMock } from '@@/src/server/api/test/mock';
+import { apiTestMock } from '../../src/server/api/test/mock';
 
 export default [apiTestMock];
