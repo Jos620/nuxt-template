@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxt/test-utils/module',
   ],
+  ignore: ['**/api/**/mock.ts'],
   hooks: {
     'prepare:types'({ tsConfig }) {
       const aliasToRemove = ['~', '~/*', '~~', '~~/*'];
