@@ -6,6 +6,8 @@ import {
   transformerDirectives,
   transformerVariantGroup,
 } from 'unocss';
+import { presetAnimations } from 'unocss-preset-animations';
+import { presetShadcn } from 'unocss-preset-shadcn';
 
 export default defineConfig({
   presets: [
@@ -14,6 +16,8 @@ export default defineConfig({
     presetIcons({
       autoInstall: true,
     }),
+    presetAnimations(),
+    presetShadcn(),
   ],
   transformers: [transformerDirectives(), transformerVariantGroup()],
   shortcuts: {

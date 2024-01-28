@@ -106,6 +106,12 @@ devDependencies:
   unocss:
     specifier: ^0.58.3
     version: 0.58.3(@unocss/webpack@0.58.3)(postcss@8.4.33)(vite@5.0.11)
+  unocss-preset-animations:
+    specifier: ^1.0.1
+    version: 1.0.1(@unocss/preset-wind@0.58.3)(unocss@0.58.3)
+  unocss-preset-shadcn:
+    specifier: ^0.2.3
+    version: 0.2.3(unocss-preset-animations@1.0.1)(unocss@0.58.3)
   vitest:
     specifier: ^1.2.0
     version: 1.2.0(@types/node@20.11.0)(@vitest/ui@1.2.0)(happy-dom@13.1.4)
