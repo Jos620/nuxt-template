@@ -54,6 +54,7 @@
     "playwright-core": "^1.40.1",
     "playwright-msw": "^3.0.1",
     "prettier": "^3.1.1",
+    "sass": "^1.70.0",
     "typescript": "^5.3.3",
     "unocss": "^0.58.3",
     "unocss-preset-animations": "^1.0.1",
