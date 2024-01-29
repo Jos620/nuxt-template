@@ -10,15 +10,17 @@ test('Title', async ({ page }) => {
 test('Counter', async ({ page }) => {
   await page.goto('/');
 
-  const button = page.getByRole('button');
+  const button = page.getByRole('button', {
+    name: 'Counter',
+  });
   await button.click();
 
-  await expect(button).toHaveText('1');
+  await expect(button).toContainText('1');
 
   await button.click();
   await button.click();
 
-  await expect(button).toHaveText('3');
+  await expect(button).toContainText('3');
 });
 
 test('GitHub link', async ({ page }) => {
