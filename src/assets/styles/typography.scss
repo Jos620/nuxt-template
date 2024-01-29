@@ -14,10 +14,6 @@ h4 {
   --at-apply: scroll-m-20 text-xl font-semibold tracking-tight;
 }
 
-p {
-  --at-apply: leading-7 [&:not(:first-child)]:mt-6;
-}
-
 blockquote {
   --at-apply: mt-6 border-l-2 pl-6 italic;
 }
@@ -30,18 +26,31 @@ code {
   --at-apply: relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold;
 }
 
-p.lead {
+p {
+  --at-apply: [&:not(:first-child)]:mt-6;
+}
+
+p,
+span {
+  --at-apply: leading-7;
+}
+
+p.lead,
+span.lead {
   --at-apply: text-xl text-muted-foreground;
 }
 
-p.large {
+p.large,
+span.large {
   --at-apply: text-lg font-semibold;
 }
 
-p.small {
+p.small,
+span.small {
   --at-apply: text-sm font-medium leading-none;
 }
 
-p.muted {
+p.muted,
+span.muted {
   --at-apply: text-sm text-muted-foreground;
 }
