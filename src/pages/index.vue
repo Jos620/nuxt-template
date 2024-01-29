@@ -13,9 +13,13 @@ const githubRepoName = githubRepoLink.split('/').slice(-2).join('/');
   <main h-screen center col="<sm:~" gap-2 relative>
     <h1>{{ data?.title }}</h1>
 
+    <a class="sm:hidden" :href="githubRepoLink" target="_blank">
+      <div i-mdi:github w-12 h-12></div>
+    </a>
+
     <UiHoverCard :open-delay="125">
       <UiHoverCardTrigger as-child>
-        <a :href="githubRepoLink" target="_blank">
+        <a class="<sm:hidden" :href="githubRepoLink" target="_blank">
           <div i-mdi:github w-12 h-12></div>
         </a>
       </UiHoverCardTrigger>
