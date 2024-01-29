@@ -20,6 +20,7 @@ blockquote {
 }
 
 ul {
+  /* stylelint-disable-next-line scss/operator-no-unspaced */
   @apply my-6 ml-6 list-disc [&>li]:mt-2;
 }
 
