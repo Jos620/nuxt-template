@@ -1,56 +1,58 @@
 h1 {
-  --at-apply: scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
+  @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
 }
 
 h2 {
-  --at-apply: scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first: mt-0;
+  @apply scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight
+    transition-colors first:mt-0;
 }
 
 h3 {
-  --at-apply: scroll-m-20 text-2xl font-semibold tracking-tight;
+  @apply scroll-m-20 text-2xl font-semibold tracking-tight;
 }
 
 h4 {
-  --at-apply: scroll-m-20 text-xl font-semibold tracking-tight;
+  @apply scroll-m-20 text-xl font-semibold tracking-tight;
 }
 
 blockquote {
-  --at-apply: mt-6 border-l-2 pl-6 italic;
+  @apply mt-6 border-l-2 pl-6 italic;
 }
 
 ul {
-  --at-apply: my-6 ml-6 list-disc [&>li]:mt-2;
+  @apply my-6 ml-6 list-disc [&>li]:mt-2;
 }
 
 code {
-  --at-apply: relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold;
+  @apply relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono
+    text-sm font-semibold;
 }
 
 p {
-  --at-apply: [&:not(:first-child)]:mt-6;
+  @apply [&:not(:first-child)]:mt-6;
 }
 
 p,
 span {
-  --at-apply: leading-7;
+  @apply leading-7;
 }
 
 p.lead,
 span.lead {
-  --at-apply: text-xl text-muted-foreground;
+  @apply text-xl text-muted-foreground;
 }
 
 p.large,
 span.large {
-  --at-apply: text-lg font-semibold;
+  @apply text-lg font-semibold;
 }
 
 p.small,
 span.small {
-  --at-apply: text-sm font-medium leading-none;
+  @apply text-sm font-medium leading-none;
 }
 
 p.muted,
 span.muted {
-  --at-apply: text-sm text-muted-foreground;
+  @apply text-sm text-muted-foreground;
 }
