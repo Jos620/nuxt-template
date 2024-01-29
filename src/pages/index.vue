@@ -7,16 +7,20 @@ const isDark = useDark();
 </script>
 
 <template>
-  <h1>{{ data?.title }}</h1>
+  <main h-screen center gap-2 relative>
+    <h1>{{ data?.title }}</h1>
 
-  <Counter />
+    <a href="https://github.com/jos620/nuxt-template" target="_blank">
+      <div i-mdi:github w-12 h-12></div>
+    </a>
 
-  <UiButton @click="() => (isDark = !isDark)">
-    <div v-if="isDark" i-mdi:weather-night />
-    <div v-else i-mdi:white-balance-sunny />
-  </UiButton>
+    <div absolute bottom-4 right-4 center gap-4>
+      <Counter />
 
-  <a href="https://github.com/jos620/nuxt-template" target="_blank">
-    <div i-mdi:github w-12 h-12></div>
-  </a>
+      <UiButton @click="() => (isDark = !isDark)">
+        <div v-if="isDark" i-mdi:weather-night />
+        <div v-else i-mdi:white-balance-sunny />
+      </UiButton>
+    </div>
+  </main>
 </template>
