@@ -13,28 +13,26 @@ const githubRepoName = githubRepoLink.split('/').slice(-2).join('/');
   <main h-screen center gap-2 relative>
     <h1>{{ data?.title }}</h1>
 
-    <ClientOnly>
-      <UiHoverCard>
-        <UiHoverCardTrigger>
-          <a :href="githubRepoLink" target="_blank">
-            <div i-mdi:github w-12 h-12></div>
-          </a>
-        </UiHoverCardTrigger>
-        <UiHoverCardContent>
-          <a :href="githubRepoLink" flex items-center h-8 gap-4>
-            <div i-mdi:github w-8 h-8></div>
-            <UiSeparator orientation="vertical" />
+    <UiHoverCard>
+      <UiHoverCardTrigger>
+        <a :href="githubRepoLink" target="_blank">
+          <div i-mdi:github w-12 h-12></div>
+        </a>
+      </UiHoverCardTrigger>
+      <UiHoverCardContent>
+        <a :href="githubRepoLink" flex items-center h-8 gap-4>
+          <div i-mdi:github w-8 h-8></div>
+          <UiSeparator orientation="vertical" />
 
-            <div col justify-center>
-              <p class="text-sm">
-                {{ githubRepoName }}
-              </p>
-              <span class="text-xs text-gray-500">GitHub</span>
-            </div>
-          </a>
-        </UiHoverCardContent>
-      </UiHoverCard>
-    </ClientOnly>
+          <div col justify-center>
+            <p class="text-sm">
+              {{ githubRepoName }}
+            </p>
+            <span class="text-xs text-gray-500">GitHub</span>
+          </div>
+        </a>
+      </UiHoverCardContent>
+    </UiHoverCard>
 
     <div absolute bottom-4 right-4 center gap-4>
       <Counter />
