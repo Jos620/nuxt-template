@@ -10,7 +10,7 @@ const githubRepoName = githubRepoLink.split('/').slice(-2).join('/');
 </script>
 
 <template>
-  <main h-screen center gap-2 relative>
+  <main h-screen center col="<sm:~" gap-2 relative>
     <h1>{{ data?.title }}</h1>
 
     <UiHoverCard :open-delay="125">
@@ -19,7 +19,7 @@ const githubRepoName = githubRepoLink.split('/').slice(-2).join('/');
           <div i-mdi:github w-12 h-12></div>
         </a>
       </UiHoverCardTrigger>
-      <UiHoverCardContent>
+      <UiHoverCardContent as-child>
         <a :href="githubRepoLink" flex items-center gap-4>
           <div center gap-4 h-9>
             <div i-mdi:github w-8 h-8></div>
