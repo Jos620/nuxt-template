@@ -6,7 +6,7 @@ const { data } = useFetch<TestResponse>('/api/test');
 const isDark = useDark();
 
 const githubRepoLink = 'https://github.com/jos620/nuxt-template';
-const repoName = githubRepoLink.split('/').slice(-2).join('/');
+const githubRepoName = githubRepoLink.split('/').slice(-2).join('/');
 </script>
 
 <template>
@@ -27,7 +27,7 @@ const repoName = githubRepoLink.split('/').slice(-2).join('/');
 
             <div col justify-center>
               <p class="text-sm">
-                {{ repoName }}
+                {{ githubRepoName }}
               </p>
               <span class="text-xs text-gray-500">GitHub</span>
             </div>
