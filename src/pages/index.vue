@@ -37,10 +37,12 @@ const githubRepoName = githubRepoLink.split('/').slice(-2).join('/');
     <div absolute bottom-4 right-4 center gap-4>
       <Counter />
 
-      <UiButton @click="() => (isDark = !isDark)">
-        <div v-if="isDark" i-mdi:weather-night />
-        <div v-else i-mdi:white-balance-sunny />
-      </UiButton>
+      <ClientOnly>
+        <UiButton @click="() => (isDark = !isDark)">
+          <div v-if="isDark" i-mdi:weather-night />
+          <div v-else i-mdi:white-balance-sunny />
+        </UiButton>
+      </ClientOnly>
     </div>
   </main>
 </template>
