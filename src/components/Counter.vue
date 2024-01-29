@@ -11,6 +11,6 @@ store.count = initialCount;
 
 <template>
   <UiButton variant="outline" @click="store.increment">
-    {{ store.count }}
+    Counter: {{ store.count }}
   </UiButton>
 </template>
