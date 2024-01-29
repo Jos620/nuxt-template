@@ -14,7 +14,7 @@ const githubRepoName = githubRepoLink.split('/').slice(-2).join('/');
     <h1>{{ data?.title }}</h1>
 
     <UiHoverCard>
-      <UiHoverCardTrigger>
+      <UiHoverCardTrigger as-child>
         <a :href="githubRepoLink" target="_blank">
           <div i-mdi:github w-12 h-12></div>
         </a>
