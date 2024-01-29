@@ -34,18 +34,20 @@ const buttonVariants = cva(
   },
 );
 
-interface ButtonVariantProps extends VariantProps<typeof buttonVariants> {}
+type ButtonVariantProps = VariantProps<typeof buttonVariants>;
 
 interface Props extends PrimitiveProps {
   variant?: ButtonVariantProps['variant'];
   size?: ButtonVariantProps['size'];
   as?: string;
+  asChild?: boolean;
 }
 
 withDefaults(defineProps<Props>(), {
   variant: 'default',
   size: 'default',
   as: 'button',
+  asChild: false,
 });
 </script>
 

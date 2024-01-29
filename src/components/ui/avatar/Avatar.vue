@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { VariantProps } from 'class-variance-authority';
 import { cva } from 'class-variance-authority';
 import { AvatarRoot } from 'radix-vue';
 
@@ -21,9 +22,11 @@ const avatarVariant = cva(
   },
 );
 
+type AvatarVariantProps = VariantProps<typeof avatarVariant>;
+
 interface Props {
-  size?: NonNullable<Parameters<typeof avatarVariant>[0]>['size'];
-  shape?: NonNullable<Parameters<typeof avatarVariant>[0]>['shape'];
+  size?: AvatarVariantProps['size'];
+  shape?: AvatarVariantProps['shape'];
   class?: string;
 }
 
