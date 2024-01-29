@@ -23,5 +23,11 @@ export default defineConfig({
   shortcuts: {
     center: 'flex items-center justify-center',
     col: 'flex flex-col',
+
+    // Typography
+    'text-lead': 'text-xl text-muted-foreground',
+    'text-large': 'text-lg font-semibold',
+    'text-small': 'text-sm font-medium leading-none',
+    'text-muted': 'text-sm text-muted-foreground',
   },
 });

@@ -37,23 +37,3 @@ p,
 span {
   @apply leading-7;
 }
-
-p.lead,
-span.lead {
-  @apply text-xl text-muted-foreground;
-}
-
-p.large,
-span.large {
-  @apply text-lg font-semibold;
-}
-
-p.small,
-span.small {
-  @apply text-sm font-medium leading-none;
-}
-
-p.muted,
-span.muted {
-  @apply text-sm text-muted-foreground;
-}
