@@ -10,7 +10,7 @@ const githubRepoName = githubRepoLink.split('/').slice(-2).join('/');
 </script>
 
 <template>
-  <main h-screen center col="<sm:~" gap-2 relative>
+  <main h-svh center col="<sm:~" gap-2 relative>
     <h1>{{ data?.title }}</h1>
 
     <a class="sm:hidden" :href="githubRepoLink" target="_blank">
