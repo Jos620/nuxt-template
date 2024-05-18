@@ -37,3 +37,7 @@ p,
 span {
   @apply leading-7;
 }
+
+a:hover {
+  @apply underline;
+}
