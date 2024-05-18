@@ -5,9 +5,7 @@ const props = defineProps<HoverCardTriggerProps>();
 </script>
 
 <template>
-  <ClientOnly>
-    <HoverCardTrigger v-bind="props">
-      <slot />
-    </HoverCardTrigger>
-  </ClientOnly>
+  <HoverCardTrigger v-bind="props">
+    <slot />
+  </HoverCardTrigger>
 </template>
