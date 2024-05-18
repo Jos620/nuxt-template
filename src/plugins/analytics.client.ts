@@ -1,5 +1,7 @@
-import { inject } from '@vercel/analytics';
+export default defineNuxtPlugin(async () => {
+  if (import.meta.env.TEST) return;
 
-export default defineNuxtPlugin(() => {
+  const { inject } = await import('@vercel/analytics');
+
   inject();
 });
