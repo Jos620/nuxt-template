@@ -1,5 +1,14 @@
 <script setup lang="ts">
-const isDark = useDark();
+import { type Theme, THEME_KEY } from '@/lib/theme';
+
+const themeCookie = useCookie<Theme>(THEME_KEY);
+const isDark = useDark({
+  onChanged(_, defaultHandler, mode) {
+    themeCookie.value = mode;
+    defaultHandler(mode);
+  },
+  initialValue: themeCookie,
+});
 </script>
 
 <template>
