@@ -3,7 +3,11 @@ import { Primitive, type PrimitiveProps } from 'radix-vue';
 
 import { githubRepoLink } from '@/lib/github';
 
-withDefaults(defineProps<PrimitiveProps>(), {
+interface Props extends PrimitiveProps {
+  href?: string;
+}
+
+withDefaults(defineProps<Props>(), {
   as: 'a',
   href: githubRepoLink,
 });
