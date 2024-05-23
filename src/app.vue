@@ -5,9 +5,8 @@ import { type Theme, THEME_KEY } from '@/lib/theme';
 
 const themeCookie = useCookie<Theme>(THEME_KEY);
 useDark({
-  onChanged(_, defaultHandler, mode) {
-    themeCookie.value = mode;
-    defaultHandler(mode);
+  onChanged(isDark) {
+    themeCookie.value = isDark ? 'dark' : 'light';
   },
   initialValue: themeCookie,
 });
