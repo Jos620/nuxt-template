@@ -2,6 +2,7 @@
 import type { VariantProps } from 'class-variance-authority';
 import { cva } from 'class-variance-authority';
 import { Primitive, type PrimitiveProps } from 'radix-vue';
+import type { NativeElements } from 'vue';
 
 import { cn } from '@/lib/utils';
 
@@ -39,7 +40,7 @@ type ButtonVariantProps = VariantProps<typeof buttonVariants>;
 interface Props extends PrimitiveProps {
   variant?: ButtonVariantProps['variant'];
   size?: ButtonVariantProps['size'];
-  as?: string;
+  as?: keyof NativeElements;
   asChild?: boolean;
 }
 

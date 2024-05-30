@@ -12,14 +12,14 @@ const { data } = useFetch<TestResponse>('/api/test', {
 <template>
   <h1>{{ data?.title }}</h1>
 
-  <GithubLink class="sm:hidden" />
+  <ExampleGithubLink class="sm:hidden" />
 
   <UiHoverCard :open-delay="125">
     <UiHoverCardTrigger as-child>
-      <GithubLink class="<sm:hidden" />
+      <ExampleGithubLink class="<sm:hidden" />
     </UiHoverCardTrigger>
     <UiHoverCardContent as-child>
-      <GithubLink class="flex items-center gap-4">
+      <ExampleGithubLink class="flex items-center gap-4">
         <div center gap-4 h-9>
           <div i-mdi:github w-8 h-8 />
           <UiSeparator orientation="vertical" />
@@ -31,7 +31,7 @@ const { data } = useFetch<TestResponse>('/api/test', {
           </p>
           <span text-muted>GitHub</span>
         </div>
-      </GithubLink>
+      </ExampleGithubLink>
     </UiHoverCardContent>
   </UiHoverCard>
 </template>
