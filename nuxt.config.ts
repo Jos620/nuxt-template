@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@vueuse/nuxt',
     '@nuxt/test-utils/module',
+    '@nuxt/eslint',
   ],
   ignore: ['**/api/**/mock.ts'],
   hooks: {
@@ -16,7 +17,7 @@ export default defineNuxtConfig({
 
       aliasToRemove.forEach((alias) => {
         if (tsConfig.compilerOptions?.paths[alias]) {
-          delete tsConfig.compilerOptions.paths[alias];
+          tsConfig.compilerOptions.paths[alias] = undefined;
         }
       });
     },

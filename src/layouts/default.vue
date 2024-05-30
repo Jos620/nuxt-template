@@ -9,7 +9,7 @@ const isDark = useDark();
     </main>
 
     <div absolute bottom-4 right-4 center gap-4>
-      <Counter />
+      <ExampleCounter />
 
       <UiButton @click="() => (isDark = !isDark)">
         <div v-if="isDark" i-mdi:weather-night />

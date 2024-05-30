@@ -21,7 +21,7 @@ const { data } = useFetch<TestResponse>('/api/test', {
     <UiHoverCardContent as-child>
       <GithubLink class="flex items-center gap-4">
         <div center gap-4 h-9>
-          <div i-mdi:github w-8 h-8></div>
+          <div i-mdi:github w-8 h-8 />
           <UiSeparator orientation="vertical" />
         </div>
 
