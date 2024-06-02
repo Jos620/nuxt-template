@@ -37,5 +37,6 @@ export default nuxt().append({
 
     'vue/no-multiple-template-root': 'off',
     'vue/require-default-prop': 'off',
+    'vue/html-self-closing': 'off',
   },
 });
