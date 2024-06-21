@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { githubRepoName } from '@/lib/github';
-import type { TestResponse } from '@/server/api/test';
+import type { TitleDTO } from '@/server/dto/title';
 
 const app = useNuxtApp();
 
-const { data } = useFetch<TestResponse>('/api/test', {
+const { data } = useFetch<TitleDTO>('/api/test', {
   getCachedData: (key) => app.payload.data[key],
 });
 </script>

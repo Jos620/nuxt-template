@@ -1,8 +1,6 @@
-export interface TestResponse {
-  title: string;
-}
+import type { TitleDTO } from '~/server/dto/title';
 
-export default defineEventHandler<TestResponse>(() => {
+export default defineEventHandler<TitleDTO>(() => {
   return {
     title: 'Nuxt Template!',
   };
