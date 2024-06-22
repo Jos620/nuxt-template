@@ -9,7 +9,7 @@ const isDark = useDark({
 
 <template>
   <div h-svh relative col>
-    <main h-full center col="<sm:~" gap-2 px-4>
+    <main container mx-auto h-full center col="<sm:~" gap-2 px-4>
       <slot />
     </main>
 
